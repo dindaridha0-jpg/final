@@ -1,0 +1,6 @@
+{
+  "name": "Evi Samira Jakarta Timur",
+  "description": "Website resmi informasi dan konsultasi paket Umroh Samira Travel: Paket Safara, Safawi, Sukari, Majol, dan Umroh Plus Turki.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

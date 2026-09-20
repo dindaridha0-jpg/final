@@ -1,0 +1,183 @@
+.package-image-collage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  background: #d8b25c;
+  transform-origin: center;
+  height: 100%;
+}
+
+.package-image-collage .collage-panel {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-width: 0;
+  transition: transform var(--ios-transition-slow);
+}
+
+.package-card:hover .package-image-collage .collage-panel {
+  transform: scale(1.05);
+}
+
+.package-image-collage .collage-panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 38%, rgba(2, 23, 31, .62));
+}
+
+.package-image-collage .collage-label {
+  position: absolute;
+  z-index: 1;
+  left: 11px;
+  bottom: 10px;
+  color: #fff;
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 5px rgba(0,0,0,.55);
+}
+
+.package-image-collage .collage-panel:last-child { background-position: 57% center; }
+
+/* Modern Special Edition Card for Umroh Plus Turki */
+.package-card-turki {
+  position: relative;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.96) 0%, rgba(254, 242, 242, 0.85) 100%);
+  border: 1.5px solid rgba(220, 38, 38, 0.25);
+  box-shadow: 0 12px 32px rgba(220, 38, 38, 0.08), var(--ios-shadow-md);
+}
+
+[data-theme='dark'] .package-card-turki,
+body.dark-mode .package-card-turki {
+  background: linear-gradient(145deg, rgba(20, 30, 48, 0.95) 0%, rgba(35, 20, 25, 0.9) 100%);
+  border-color: rgba(220, 38, 38, 0.35);
+}
+
+.turki-ribbon-tag {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--ios-radius-pill);
+  box-shadow: 0 3px 10px rgba(220, 38, 38, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.turki-route-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #991b1b;
+  background: rgba(220, 38, 38, 0.08);
+  border: 1px solid rgba(220, 38, 38, 0.16);
+  padding: 4px 10px;
+  border-radius: var(--ios-radius-pill);
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+[data-theme='dark'] .turki-route-pill,
+body.dark-mode .turki-route-pill {
+  color: #fca5a5;
+  background: rgba(220, 38, 38, 0.18);
+  border-color: rgba(220, 38, 38, 0.3);
+}
+
+.turki-highlights-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.turki-tag-item {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--ios-navy);
+  background: rgba(9, 41, 56, 0.05);
+  border: 1px solid rgba(9, 41, 56, 0.08);
+  padding: 3px 8px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+[data-theme='dark'] .turki-tag-item,
+body.dark-mode .turki-tag-item {
+  color: #e2e8f0;
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Modern Detail Visual Bento for Umroh Plus Turki */
+.turki-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin: 24px 0 28px;
+}
+
+@media (max-width: 640px) {
+  .turki-bento-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.turki-bento-card {
+  background: var(--ios-glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--ios-line);
+  border-radius: var(--ios-radius-md);
+  padding: 16px 18px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  transition: all var(--ios-transition-normal);
+}
+
+.turki-bento-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(220, 38, 38, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.turki-bento-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(220, 38, 38, 0.1);
+  color: #dc2626;
+  font-size: 1.25rem;
+  display: grid;
+  place-content: center;
+  flex-shrink: 0;
+}
+
+.turki-bento-text h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ios-navy);
+  margin-bottom: 4px;
+}
+
+.turki-bento-text p {
+  font-size: 0.82rem;
+  color: var(--ios-secondary);
+  line-height: 1.45;
+  margin: 0;
+}
